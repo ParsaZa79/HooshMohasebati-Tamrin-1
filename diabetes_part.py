@@ -139,7 +139,7 @@ def run_diabetes_section():
     y_pred_train = ppn_diabetes.predict(X_train_std)
 
     accuracy_train = accuracy_score(y_train, y_pred_train)
-    print(f"\n[4] Daghighat Model roye kole dade (dade amuzeshi): {accuracy_train:.4f}")
+    print(f"\n[4] Deghate Model roye kole dade (dade amuzeshi): {accuracy_train:.4f}")
 
     print("[5] Rasme Namudare Khataye Amuzesh...")
     plot_errors(ppn_diabetes.errors_, title='Training Error for Diabetes Dataset', n_iter=ppn_diabetes.n_iter)
@@ -172,17 +172,17 @@ def run_diabetes_section():
             ppn_d_analysis.fit(X_train_std, y_train)
             acc = accuracy_score(y_train, ppn_d_analysis.predict(X_train_std))
             results_analysis[(eta_val, n_iter_val)] = (acc, ppn_d_analysis.errors_[-1] if ppn_d_analysis.errors_ else -1)
-            print(f"      Daghighat Nahayi: {acc:.4f}, Khataye epoch akhar: {results_analysis[(eta_val, n_iter_val)][1]}")
+            print(f"      Deghate Nahayi: {acc:.4f}, Khataye epoch akhar: {results_analysis[(eta_val, n_iter_val)][1]}")
 
     print("\n   Kholase Tahlil:")
     for params, (acc, final_err) in results_analysis.items():
         print(f"   Eta={params[0]}, Iter={params[1]} -> Accuracy: {acc:.4f}, Final Epoch Errors: {final_err}")
 
     print("\n   Tahlil Kolli:")
-    print("   - Dade Diabetes ehtemalan be tore kamel khatti jodapazir nist, banabarin Perceptron momken ast be daghighat 100% naresad va namudare khata sefr nashavad.")
-    print("   - Nerkh Yadgiri (eta) bayad ba daghighat entekhab shavad. Meghdar haye besyar koochak momken ast hamgerayi ra kond konand.")
+    print("   - Dade Diabetes ehtemalan be tore kamel khatti jodapazir nist, banabarin Perceptron momken ast be deghate 100% naresad va namudare khata sefr nashavad.")
+    print("   - Nerkh Yadgiri (eta) bayad ba deghate entekhab shavad. Meghdar haye besyar koochak momken ast hamgerayi ra kond konand.")
     print("   - Meghdar haye eta bozorgtar momken ast baes be nowsan khata va adam-e hamgerayi shavand.")
-    print("   - Tedade Tekrar-ha (n_iter) bayad kafi bashad ta model forsat yadgiri dashte bashad, ama tedade ziadi lazeman daghighat ra behبود nemidahad (momken ast khata dar yek sath baghi bemanad).")
+    print("   - Tedade Tekrar-ha (n_iter) bayad kafi bashad ta model forsat yadgiri dashte bashad, ama tedade ziadi lazeman deghat ra behبود nemidahad (momken ast khata dar yek sath baghi bemanad).")
     print("   - Standard sazi-ye dade-ha (mesle StandardScaler) baraye amalkard-e monaseb Perceptron roye dade-haye vagheyi hayati ast.")
 
     print("\n--- Payan-e Proje ---") 
