@@ -17,7 +17,7 @@ def run_diabetes_section():
         def fit(self, X, y):
             n_features = X.shape[1]
             self.w_ = self._rng.normal(loc=0.0, scale=0.01, size=n_features)
-            self.b_ = np.float_(0.)
+            self.b_ = np.float64(0.)
             self.errors_ = []
 
             for i in range(self.n_iter):
